@@ -1,12 +1,15 @@
 import unittest  # For unit testing
 import sys
 import os
+
+# Set the absolute path before importing modules 
+# Suppress linting rule E402 for this line
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-)
+) # noqa: E402
 
 from src.train import accuracy_score, train_test_split
-from src.train import  RandomForestClassifier, load_iris
+from src.train import RandomForestClassifier, load_iris
 
 
 class TestModel(unittest.TestCase):
@@ -22,6 +25,7 @@ class TestModel(unittest.TestCase):
         predictions = model.predict(X_test)
         # Assert accuracy is above 0.5
         self.assertGreater(accuracy_score(y_test, predictions), 0.5)
+
 
 if __name__ == "__main__":
     unittest.main()
