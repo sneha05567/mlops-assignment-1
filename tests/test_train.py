@@ -1,8 +1,6 @@
-import unittest
-import sys
-import os
 from src.train import accuracy_score, train_test_split
 from src.train import RandomForestClassifier, load_iris
+import unittest
 
 
 class TestModel(unittest.TestCase):
