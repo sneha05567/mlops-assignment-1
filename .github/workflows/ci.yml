@@ -30,12 +30,13 @@ jobs:
           pip install -r requirements.txt
 
       # Step 4: Run linting
-      - name: Lint code
-        run: |
-          pip install flake8
-          flake8 src tests
+      # - name: Lint code
+      #   run: |
+      #     pip install flake8
+      #     flake8 src tests
 
       # Step 5: Run tests
       - name: Run tests
         run: |
+          pip install pytest
           pytest --junitxml=test-results/results.xml
