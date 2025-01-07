@@ -19,5 +19,7 @@ class TestModel(unittest.TestCase):
         # Assert accuracy is above 0.5
         self.assertGreater(accuracy_score(y_test, predictions), 0.5)
 
+
 if __name__ == "__main__":
     unittest.main()
+
