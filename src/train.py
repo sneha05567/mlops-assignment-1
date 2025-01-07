@@ -11,10 +11,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 # Train model
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
-print(f"RandomForestClassfier Model Trained on Iris Data Successfully...")
+print("RandomForestClassfier Trained on Iris Data Successfully...")
 
 # Evaluate
 predictions = model.predict(X_test)
-print(f"Evaluating Model Performance...")
+print("Evaluating Model Performance...")
 acc = accuracy_score(y_test, predictions)
 print(f"Accuracy: {acc}")
