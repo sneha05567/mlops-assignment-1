@@ -1,13 +1,6 @@
-import unittest  # For unit testing
+import unittest
 import sys
 import os
-
-# Set the absolute path before importing modules 
-# Suppress linting rule E402 for this line
-sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-) # noqa: E402
-
 from src.train import accuracy_score, train_test_split
 from src.train import RandomForestClassifier, load_iris
 
