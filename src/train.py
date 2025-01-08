@@ -4,7 +4,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import os
 import joblib
-import json
 
 # Load dataset
 data = load_iris()
@@ -22,7 +21,7 @@ print("Evaluating Model Performance...")
 acc = accuracy_score(y_test, predictions)
 print(f"Accuracy: {acc}")
 
-# Get the absolute path of parent directory 
+# Get the absolute path of parent directory
 base_dir = os.path.abspath(
     os.path.join(os.path.dirname(__file__), '..')
 )
